@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PHP WebSocket Chat</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>⚡ PHP WebSocket</h2>
+
+      <div class="block">
+        <label>WebSocket URL</label>
+        <input id="url" type="text" value="ws://0.0.0.0:8080" />
+        <button id="connect">Connect</button>
+        <button id="disconnect" disabled class="danger">Disconnect</button>
+      </div>
+
+      <div class="block">
+        <label>Display Name</label>
+        <input id="name" type="text" placeholder="Your name" />
+        <button id="setName">Update Name</button>
+      </div>
+    </aside>
+
+    <!-- Chat Area -->
+    <main class="chatArea">
+      <header class="chatHeader">
+        <h1>💬 Live Chat Room</h1>
+      </header>
+
+      <div id="log"></div>
+
+      <form id="form" class="chatForm">
+        <input id="input" type="text" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
